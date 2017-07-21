@@ -1,18 +1,18 @@
 <?php
 
-$table="mytable";
+$table = "mytable";
 
-$hello="Hello world";
+$hello = "Hello world";
 $date = date('Y/m/d H:i:s');
 
-$serverIP=$_SERVER['SERVER_ADDR'];
+$serverIP = $_SERVER['SERVER_ADDR'];
 
-$sql="select hello from $table";
+$sql = "select hello from $table";
 
-$dbhost=$_ENV["DBHOST"];
-$database=$_ENV["DATABASE"];
-$dbuser=$_ENV["DBUSER"];
-$dbpassword=$_ENV["DBPASSWORD"];
+$dbhost = $_ENV["DBHOST"];
+$database = $_ENV["DATABASE"];
+$dbuser = $_ENV["DBUSER"];
+$dbpassword = $_ENV["DBPASSWORD"];
 
 if (empty($dbhost) || empty($database) || empty($dbuser) || empty($dbpassword) ) {
     echo 'Missing environment variables: you need to set DBHOST, DATABASE, DBUSER and DBPASSWORD';
@@ -26,7 +26,7 @@ if ($conn->connect_error) {
     exit();
 }
 
-$rs=$conn->query($sql);
+$rs = $conn->query($sql);
 
 if($rs === false) {
     echo "Unable to retrieve data: ".$conn->error;
