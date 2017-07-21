@@ -7,7 +7,7 @@ $date = date('Y/m/d H:i:s');
 
 $serverIP = $_SERVER['SERVER_ADDR'];
 
-$sql = "select hello from $table";
+$sql = "select data from $table";
 
 $dbhost = $_ENV["DBHOST"];
 $database = $_ENV["DATABASE"];

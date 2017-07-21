@@ -20,4 +20,7 @@ services:
     restart: always
     volumes:
       - ./sql/fixtures.sql:/docker-entrypoint-initdb.d/fixtures.sql:ro
+      - mariadb:/var/lib/mysql
+volumes:
+  mariadb: {}
 ...
