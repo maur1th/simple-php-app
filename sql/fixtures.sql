@@ -1,6 +1,6 @@
 CREATE TABLE mytable (
-    hello varchar(255)
+    data varchar(255)
 );
 
-INSERT INTO mytable (hello)
+INSERT INTO mytable (data)
 VALUES ("42");
