@@ -5,18 +5,18 @@ services:
     build: .
     environment:
       DBHOST: db:3306
-      DATABASE: 42training
+      DATABASE: training42
       DBUSER: duoquadra
-      DBPASSWORD: crimson
+      DBPASSWORD: crimson42
     ports:
       - 8080:80
   db:
     image: mariadb:10.2
     environment:
-      MYSQL_ROOT_PASSWORD: crimson
-      MYSQL_DATABASE: 42training
+      MYSQL_ROOT_PASSWORD: crimson42
+      MYSQL_DATABASE: training42
       MYSQL_USER: duoquadra
-      MYSQL_PASSWORD: crimson
+      MYSQL_PASSWORD: crimson42
     restart: always
     volumes:
       - ./sql/fixtures.sql:/docker-entrypoint-initdb.d/fixtures.sql:ro
